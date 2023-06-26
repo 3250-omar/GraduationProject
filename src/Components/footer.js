@@ -12,7 +12,7 @@ export const Footer = () => {
         <Link to="/">
           <FiFacebook className="icons" size="25" />
         </Link>
-        <Link to="/">
+        <Link to="https://github.com/3250-omar/GraduationProject.git">
           <FaGithub className="icons" size="25" />
         </Link>
         <Link to="/">
