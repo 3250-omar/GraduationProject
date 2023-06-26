@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&family=Barlow+Semi+Condensed&family=Hanken+Grotesk:wght@300&family=Montserrat&family=Outfit&family=Plus+Jakarta+Sans:wght@500;800&family=Poppins&family=Raleway:wght@400;700&family=Rubik:wght@500&family=Ubuntu:wght@400;500&family=Vina+Sans&display=swap');
+:root{
+    --NAV-COLOR: rgba(255,255,255,.6) ;
+    --BUTTON-COLOR:hsla(204, 78%, 53%,.8);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    position: relative;
+    padding: .75rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: 0;
+    z-index: 100 ;
+   
+}
+.sticky{
+    position: sticky;
+}
+
+nav{
+    border-radius: 20px;
+    padding: 10px;
+    background-color:  var(--NAV-COLOR);
+    width:500px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.navbar a  {
+    text-decoration: none;
+    transition: all .2s;
+    font-size: larger;
+}
+.navbar a:any-link {
+    color:black;
+}
+.navbar a:hover {
+    transform: scale(1.2);
+    transform: translateY(-3px);
+    color:var(--BUTTON-COLOR);
+}
+.navbar img{
+width:100px;
+height: 75px;
+}
+.SubButton {
+    padding: 15px;
+    border-radius: 20px;
+    border: none;
+    transition: all .2s;
+    background-color:var(--BUTTON-COLOR);
+    color: white;
+    font-family:cursive;
+    letter-spacing: 1px;
+    opacity: .9;
+}
+.SubButton:hover {
+    -moz-box-shadow: 0px 0px 99px 25px var(--BUTTON-COLOR);
+    box-shadow: 0px 0px 99px 25px var(--BUTTON-COLOR);
+    cursor: pointer;
+
+}
+.btun{
+    background-color: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all .3s;
+    width: max-content;
+    display: none;
+}
+.btun:hover{
+    transform: scale(1.2);
+}
+.buttns{
+    display: flex;
+}
+@media only screen and (max-width:1024px){
+    
+    .open{
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 100;
+        transition: all .3s;
+        margin: 1.25rem;
+    }
+    .open:hover , .close:hover{
+        transform: scale(1.2);
+        color: black;
+        cursor: pointer;
+    }
+    .close{
+        display: block;
+        position:absolute;
+        top:0;
+        right:0;
+        margin: 1rem;
+        font-size: 2rem;
+
+    }
+    .navbar{
+        position: fixed;
+		top: -200vh;
+		right: 0;
+		height: 100%;
+		width:-1vw;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color:white;
+		transition: .3s;
+    }
+    .navbar_responsive{
+        position: absolute;
+        top: 0;
+        right: 0;
+        width:-50%;
+        height: 100vh;
+        color: white;
+        transform: translateY(0);
+        transition: all 1s;
+        z-index: 1000;
+    }
+    nav{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        background-color: white;
+    }  
+}
+.User {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Log_out{
+    cursor: pointer;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:none;
+    color: black;
+    transition: all .3s;
+
+}
+.Log_out:hover{
+    transform: scale(1.2);
+    color: rgba(255, 0, 0,.8);
+
+
+}
+

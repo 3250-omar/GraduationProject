@@ -1,0 +1,67 @@
+
+:root{
+    --USER-COLOR:hsla(204, 78%, 53%,.8);
+}
+.SignedUp{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    gap: 5rem;
+}
+.SignedUp span{
+    font-size: 2rem;
+    font-weight: 700;
+    animation-delay: .6s;
+}
+.SignedUp__UserWelcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.SignedUp .BackHome{
+  
+    border-bottom: 2px solid red;
+    transition: all .2s;
+}
+.SignedUp a:any-link{
+    color: black;
+      text-decoration: none;
+}
+.SignedUp .BackHome:hover {
+    transform: scale(1.2);
+    color: red;
+}
+.SignedUp .subsc:hover{
+    transform: scale(1.2);
+    color: var(--USER-COLOR);
+}
+.ani{
+    animation: Exist .5s ease-in-out forwards;
+}
+.user{
+    text-transform: capitalize;
+    color:var(--USER-COLOR);
+}
+.links-to-leave{
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+}
+.subsc  {
+    border-bottom: 2px solid var(--USER-COLOR);
+    transition: all .2s;
+
+
+}
+@keyframes Exist {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+    
+}

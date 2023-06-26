@@ -1,0 +1,25 @@
+.NotFound{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 10rem;
+    flex-direction: column;
+}
+.NotFound h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+
+}
+.NotFound a:any-link{
+    color:red;
+    text-decoration: none;
+    transition: all .3s;
+    border-bottom: 2px solid red;
+
+}
+.NotFound a:any-link:hover{
+    transform: scale(1.2) translateY(-5px); 
+}

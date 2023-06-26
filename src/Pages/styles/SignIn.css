@@ -1,0 +1,95 @@
+:root{
+    --BUTTON-COLOR:#05BFDB;
+    --R-COLOR:#68EDC6;
+}
+.Sign_in{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+    gap:1rem;
+    width:max-content;
+    padding:40px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    /* -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75); */
+    box-sizing: border-box;
+    margin-bottom: 5em;
+    min-height: calc(100vh - 104.6px);
+}
+.Sign_in input{
+    padding: 10px;
+    width:300px;
+    border-radius: 10px;
+    border: .25px solid black;
+}
+/* .Sign_in input:focus{
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px gold;
+} */
+.Sign_in h1 {
+    font-size: 3rem;
+    letter-spacing: 5px;
+    padding: 10px;
+}
+.special-ch {
+    font-size: 4rem;
+    color: var(--R-COLOR);
+}
+.Sign_in p {
+    margin-top: -1rem;
+    margin-bottom: 3em;
+    letter-spacing: 6px;
+    font-weight: 300;
+}
+.Sign_in a{
+    text-decoration: none;
+    font-size:small;
+}
+.Sign_in button {
+    width :100%;
+    padding:10px;
+    border-radius: 10px;
+    border: none;
+    background-color:var(--BUTTON-COLOR);
+    color: white;
+    transition: all .3s;
+}
+.Sign_in button:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.Sign_in_animation {
+    animation: slides .6s ease-in forwards;
+}
+@media only screen and (max-width:400px) {
+    .Sign_in{
+        width:350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    
+}
+@keyframes slides {
+    from{
+        transform: translateX(-1000px);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+.Sign_in .error{
+    display: inline;
+    margin: 0;
+    font-size: 13px;
+    color: rgb(206, 43, 37);
+  
+
+}

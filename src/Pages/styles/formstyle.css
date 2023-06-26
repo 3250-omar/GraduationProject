@@ -1,0 +1,133 @@
+
+form li label {
+    display: block;
+}
+form {
+    list-style: none;
+}
+form input{
+    padding: 5px;
+    width:300px;
+    border: none;
+}
+form input:focus{
+    outline: none !important;
+    border-color: #719ECE;
+    box-shadow: 0 0 10px #719ECE;
+}
+
+.Form .form-left img{
+    width:400px;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.Form .form-right{
+    padding:5px;
+}
+.Form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;  
+    width:fit-content;
+    background-color: #e6eaeb;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+}
+.container{
+    min-height: calc(100vh - 104.6px);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: Welcome .8s ease-in-out 0s forwards ;
+}
+.form-right form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+}
+.form-right form li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+    position: relative;
+}
+.form-right form p{
+    color: rgb(206, 43, 37);
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 13px;
+}
+.form-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5rem;
+}
+.form-right button{
+    width:120px;
+    transition: all .25s;
+    border: none;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #719ECE;
+    color: white;
+}
+.form-right button:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.form-right a:any-link{
+    color: black;
+    font-size: small;
+    text-decoration: none;
+}
+.form-right a:hover{
+    color: rgba(255, 0, 0,.6);
+}
+.BeOneOfUs{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+.BeOneOfUs img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.submitbtn{
+    width: 100%;
+    margin: 0 auto;
+}
+@keyframes Welcome {
+    from{
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+    
+}
+@media only screen and (max-width:400px) {
+     .form-right , .BeOneOfUs{
+        width:350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .Form .form-left img{
+        width: 100%;
+        border-radius: 20px;
+    }
+    
+}
