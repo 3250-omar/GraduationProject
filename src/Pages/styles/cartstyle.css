@@ -21,7 +21,6 @@
         align-items: center;
         gap: 10px;
         min-height: calc(100vh - 104.6px);
-
     }
     .cartItem{
         display: flex;
@@ -89,4 +88,13 @@
         font-size: 1rem;
         font-weight: bold;
         color: black;
+    }
+    @media  only screen and (max-width:850px) {
+       
+        .cartItem{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        
     }
