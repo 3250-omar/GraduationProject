@@ -12,9 +12,9 @@ export const Footer = () => {
         <Link to="/">
           <FiFacebook className="icons" size="25" />
         </Link>
-        <Link to="https://github.com/3250-omar/GraduationProject.git">
+        <a href="https://github.com/3250-omar/GraduationProject.git">
           <FaGithub className="icons" size="25" />
-        </Link>
+        </a>
         <Link to="/">
           <FaInstagram className="icons" size="25" />
         </Link>
