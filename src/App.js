@@ -1,5 +1,4 @@
 import "./App.css";
-import { Router, useLocation } from "react-router-dom";
 import { Navbar } from "./Components/navbar";
 import { CartContextProvider } from "./context/cart-context";
 import { Footer } from "./Components/footer";

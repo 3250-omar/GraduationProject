@@ -3,6 +3,7 @@
 }
 :root {
     --BGD-Color :#f3ffff;
+    --DESIGN-COLOR:#4cc0ef;
 }
 .the-store img {
     width:300px;
@@ -25,7 +26,7 @@ header {
 .heading  span {
     font-size: 5rem;
     text-decoration:underline;
-    color:   #4cc0ef;
+    color:  var(--DESIGN-COLOR);
 }
 
 .products h2 {
@@ -37,6 +38,10 @@ header {
 }
 .products{
     animation: movingBike 2s forwards .03s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 .products img {
@@ -114,7 +119,7 @@ header {
     transition: all .2s;
 }
 .product-board:hover{
-    border-color:  #4cc0ef;
+    border-color: var(--DESIGN-COLOR);
     cursor: pointer;
 
 }
@@ -139,7 +144,7 @@ header {
     border-radius: 2rem;
     width: 100%;
     background-color: transparent;
-    border: 1px solid #4cc0ef;
+    border: 1px solid var(--DESIGN-COLOR);
     font-weight: 800;
     transition: all .5s;
 }
@@ -161,8 +166,26 @@ header {
     height: 400px;
 }
 .custom-dot-list-style {
-    color: #4cc0ef;
+    color:var(--DESIGN-COLOR);
 }
+.Searching{
+    padding: 7px 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: larger;
+    
+
+
+}
+.ContaingSearch{
+    width: 100%;
+    background-color:var(--DESIGN-COLOR);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
 
 @keyframes movingBike {
     0%{

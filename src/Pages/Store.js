@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Bikes } from "../Components/bikesinCarousel";
 import { BiDownArrowAlt } from "react-icons/bi";
 import "./styles/Storestyle.css";
@@ -11,8 +11,12 @@ import Photo from "../Images/store images/Primaryform.png";
 import kit from "../Images/1500W+DC+ALL+PARTS-removebg-preview.png";
 import finalProduct from "../Images/model-a-side-removebg-preview.png";
 import { motion } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Store = () => {
+  const ToCart = useNavigate();
+  const [searchItem, SetSearchItem] = useState("");
+
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -75,8 +79,16 @@ export const Store = () => {
       </div>
       <div className="products">
         <h2 id="Collect">Collect Your Bike</h2>
+        <div className="ContaingSearch">
+        <input
+          className="Searching"
+          type="search"
+          onChange={(e) => SetSearchItem(e.target.value)}
+          placeholder="Search..."
+        />
+        </div>
         <div className="products-items">
-          {Products.map((product) => (
+          {Products.filter(user=>user.name.toLowerCase().includes(searchItem)).map((product) => (
             <Product data={product} />
           ))}
         </div>

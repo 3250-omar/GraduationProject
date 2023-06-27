@@ -1,9 +1,12 @@
 import React, { useContext } from "react";
 import { CartContext } from "../context/cart-context";
-
+import { LogContext } from "../context/logContext";
+import { useNavigate } from "react-router-dom";
 export const Product = (props) => {
   const { id, name, price, productImage } = props.data;
   const { AddToCart, cartItems } = useContext(CartContext);
+  const { user } = useContext(LogContext);
+  const SubscribeFirst = useNavigate();
   const CartItemsAmount = cartItems[id];
   return (
     <div>
@@ -15,13 +18,12 @@ export const Product = (props) => {
         </div>
         <button
           onClick={() => {
-            AddToCart(id);
+            user === "" ? SubscribeFirst("/Subscribe") : AddToCart(id)
           }}
         >
-          Add To Cart {CartItemsAmount > 0 && <>({CartItemsAmount})</>}
+          Add To Cart {user!=="" && ( CartItemsAmount > 0 && <> ({CartItemsAmount})</>) }
         </button>
       </div>
     </div>
-  
   );
 };

@@ -25,6 +25,9 @@ export const AfterSignUp = () => {
         <Link to="/" className="BackHome">
           Back to Home
         </Link>
+        <Link to="/store" className="BackHome">
+          Back To Store
+        </Link>
         {user === "" && (
           <Link to="/Subscribe" className="subsc">
             Subscribe
