@@ -325,7 +325,7 @@ margin-left: .25rem; }
     transition: all .2s;
 }
 .description-image button:hover{
-    transform: scale(1.2) translateX(-50px);
+    transform: scale(1.2) translateX(1.25rem);
     transition: all .2s;
     
 
