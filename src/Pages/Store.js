@@ -11,7 +11,7 @@ import Photo from "../Images/store images/Primaryform.png";
 import kit from "../Images/1500W+DC+ALL+PARTS-removebg-preview.png";
 import finalProduct from "../Images/model-a-side-removebg-preview.png";
 import { motion } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export const Store = () => {
   const ToCart = useNavigate();
@@ -86,6 +86,7 @@ export const Store = () => {
           onChange={(e) => SetSearchItem(e.target.value)}
           placeholder="Search..."
         />
+        <button onClick={()=>ToCart('/YourCart')} className="GoToCart">Check Your Cart</button>
         </div>
         <div className="products-items">
           {Products.filter((user)=>(user.name).toLowerCase().includes(searchItem.toLowerCase())).map((product) => (

@@ -45,10 +45,13 @@ html {
 }
 .buttons{
     margin-left: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .buttons button{
     margin:0 20px;
-    padding: 1.5rem;
+    padding: 1.5rem 2rem;
     border: none;
     letter-spacing: 2px;
     font-size: 18px;
@@ -60,17 +63,13 @@ html {
     cursor: pointer;
 }
 .buttons .start{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-left-radius: 90px;
+   border-radius: 40px;
     background-color:#05BFDB;
     color: white;
 }
 .buttons .feature{
-    border-top-left-radius: 50px;
-    border-top-right-radius: 50px;
-    border-bottom-right-radius: 90px;
-    border-bottom-left-radius: 0px;
+    border-radius: 40px;
+
     background-color: var(--FEATURE-BUTTON-COLOR);
     color: white;
 

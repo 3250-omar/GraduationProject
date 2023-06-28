@@ -23,16 +23,16 @@ export const Cart = () => {
       
 
       <div className="cartItems">
+        
         {Products.map((product) => {
           if (cartItems[product.id] >= 1) {
-           
             return <CartItem data={product} />;
           }
-        })}
+        })} 
         <button className="CheckOut">
           <MdShoppingCartCheckout size={28}  style={{color:'green'}}/>
           Check Out
-        </button>
+        </button> 
       </div>
     </motion.div>
   );
