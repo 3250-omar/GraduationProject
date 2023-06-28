@@ -88,7 +88,7 @@ export const Store = () => {
         />
         </div>
         <div className="products-items">
-          {Products.filter((user)=>(user.name).toLowerCase().includes(searchItem)).map((product) => (
+          {Products.filter((user)=>(user.name).toLowerCase().includes(searchItem.toLowerCase())).map((product) => (
             <Product data={product} />
           ))}
         </div>
