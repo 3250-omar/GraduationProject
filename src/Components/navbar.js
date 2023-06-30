@@ -32,18 +32,18 @@ export const Navbar = () => {
           <button onClick={NavBarChange} className="btun close">
             <FaTimes />
           </button>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/store">Store</NavLink>
-          <NavLink to="/about">About</NavLink>
-          <NavLink to="/YourCart">
+          <NavLink to="/" onClick={NavBarChange} >Home</NavLink>
+          <NavLink to="/store"  onClick={NavBarChange}>Store</NavLink>
+          <NavLink to="/about"  onClick={NavBarChange}>About</NavLink>
+          <NavLink to="/YourCart"  onClick={NavBarChange}>
             <MdShoppingCart />
           </NavLink>
           {user === "" ? (
             <>
-              <NavLink to="/Subscribe">
+              <NavLink to="/Subscribe"  onClick={NavBarChange}>
                 <button className="SubButton">Subscribe</button>
               </NavLink>
-              <NavLink to="/SignIn">
+              <NavLink to="/SignIn"  onClick={NavBarChange}>
                 <button className="SubButton">Sign In</button>
               </NavLink>
             </>

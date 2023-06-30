@@ -4,6 +4,7 @@
         align-items: center;
         gap: 10px;
         font-size: 2rem;
+        margin-top: 1rem;
     }
     .cart h1 span {
         font-size: 3rem;
@@ -97,4 +98,14 @@
             width: 100%;
         }
         
+    }
+    .LinksToSign{
+        display: flex;
+        gap: 1rem;
+    }
+    .LinksToSign a{
+        text-decoration: none;
+    }
+    .LinksToSign a:first-child {
+        color: #32b9ee;
     }

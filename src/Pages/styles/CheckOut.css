@@ -1,0 +1,72 @@
+:root {
+    --Order-BTN:rgba(5, 191, 219,.6);
+
+}
+.Checkout{
+    min-height: calc(100vh - 104.6px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom:2rem;
+}
+.CheckOutDetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 20px;
+}
+.CheckOutDetails h2{
+    border-bottom: 2px solid black;
+    padding-bottom: 10px;
+}
+.CheckOutDetails h3 {
+    text-align: center;
+}
+.CheckOutDetails li {
+    display: flex;
+    margin-bottom: 1.5rem;
+    gap: .75rem;
+}
+.CheckOutDetails ul {
+    border-bottom: 2px solid black;
+}
+.CheckOutDetails li label{
+    font-size: 1.25rem;
+}
+.FinishingOrder{
+    width: 150px;
+    padding: .75rem;
+    cursor: pointer;
+    transition: all .25s;
+    color: white;
+    background-color:rgba(5, 191, 219,1);
+    border: none;
+    border-radius: 1rem;
+}
+.FinishingOrder:hover {
+background-color: var(--Order-BTN);
+color: black;
+}
+.CheckOutDetails li input{
+    border: .5px solid black;
+}
+.ErrosInSignIn{
+    color: red;
+}
+ th  {
+    border-bottom: 1px solid black;
+    padding: 3px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+td{
+    text-align: center;
+}

@@ -9,6 +9,7 @@ import { Alreadyexists } from "../Pages/Alreadyexists";
 import { AfterSignUp } from "../Components/AfterSignUp";
 import { NOTFOUND } from "../Pages/NOTFOUND";
 import { AnimatePresence } from 'framer-motion';
+import { Checkout } from '../Pages/Checkout';
 export const ROUTESAnimations = () => {
     const Location = useLocation();
   return (
@@ -23,6 +24,7 @@ export const ROUTESAnimations = () => {
           <Route path="/YourCart" element={<Cart />} />
           <Route path="/Subscribedsuccessfully" element={<AfterSignUp />} />
           <Route path="*" element={<NOTFOUND />} />
+          <Route path='/CheckOut' element={<Checkout/>}/>
         </Routes>
         </AnimatePresence>
         </div>

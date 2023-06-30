@@ -10,12 +10,11 @@ import { useNavigate } from "react-router-dom";
 import { LogContext } from "../context/logContext";
 import { motion } from "framer-motion";
 
-
-
-
 export const Form = () => {
-  const { user, setUser } = useContext(LogContext);
+  const { user, setUser, setEmail, setPhone } = useContext(LogContext);
   const [customer, setCustomer] = useState("");
+  const [CustomerEmail, setCustomerEmail] = useState("");
+  const [CustomerPhone, setCustomerPhone] = useState(null);
   const Navigate = useNavigate();
   const Schema = yup.object().shape({
     fullName: yup.string().required("Name Is Required"),
@@ -30,9 +29,11 @@ export const Form = () => {
 
   const OnSubmit = (data) => {
     console.log(data);
-    setUser(customer)
-    console.log(user)
+    setUser(customer);
+    console.log(user);
     Navigate("/Subscribedsuccessfully");
+    setEmail(CustomerEmail);
+    setPhone(CustomerPhone);
   };
   const {
     register,
@@ -41,13 +42,13 @@ export const Form = () => {
   } = useForm({
     resolver: yupResolver(Schema),
   });
-  console.log(customer);
   return (
     <>
-      <motion.div className="container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+      <motion.div
+        className="container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0, transition: { duration: 0.1 } }}
       >
         <div className="BeOneOfUs">
           <img src={UnKnownPerson} alt="New Member" />
@@ -55,7 +56,7 @@ export const Form = () => {
         </div>
         <div className="Form">
           <div className="form-right">
-            <form onSubmit={handleSubmit(OnSubmit)}>
+            <form onSubmit={handleSubmit(OnSubmit)} className="ExactForm">
               <li>
                 <label htmlFor="name">Name</label>
                 <input
@@ -76,6 +77,7 @@ export const Form = () => {
                   placeholder="Enter Your Email"
                   id="email"
                   {...register("Email")}
+                  onChange={(e) => setCustomerEmail(e.target.value)}
                 />
                 <p>{errors.Email?.message}</p>
               </li>
@@ -86,6 +88,7 @@ export const Form = () => {
                   placeholder="Enter Your Phone"
                   id="phone"
                   {...register("PhoneNumber")}
+                  onChange={(e) => setCustomerPhone(e.target.value)}
                 />
                 <p>{errors.PhoneNumber && "Phone Number Required"}</p>
               </li>
@@ -94,24 +97,24 @@ export const Form = () => {
                 <input
                   type="password"
                   placeholder="Enter Your Password"
-                  id="password"
                   {...register("Password")}
                 />
-                <p>{errors.Password &&'Password Required'}</p>
+                <p>{errors.Password && "Password Required"}</p>
               </li>
               <li>
                 <label htmlFor="password">confirm Password</label>
                 <input
                   type="password"
                   placeholder="Confirm Password"
-                  id="password"
-                  {...register("ConfirmedPassword")}
+                  {...register("ConfirmedPassword")}  
                 />
                 <p>{errors.ConfirmedPassword?.message}</p>
               </li>
               <Link to="/SignIn">Already Have An Account ?</Link>
 
-              <button type="submit" className="submitbtn">Submit</button>
+              <button type="submit" className="submitbtn">
+                Submit
+              </button>
             </form>
           </div>
           <div className="form-left">
