@@ -5,10 +5,11 @@ import "./Styles/navbar.css";
 import Logo from "../Images/New folder/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { LogContext } from "../context/logContext";
-import {ImExit} from 'react-icons/im'
-
+import { ImExit } from "react-icons/im";
+import { Modal } from "./Modal";
 export const Navbar = () => {
-  const { user,logOut } = useContext(LogContext);
+  const [openModal, setOpenModal] = useState(false);
+  const { user, logOut } = useContext(LogContext);
   const [navBar, setNavBar] = useState(false);
   const NavRef = useRef();
   const NavBarChange = () => {
@@ -32,24 +33,36 @@ export const Navbar = () => {
           <button onClick={NavBarChange} className="btun close">
             <FaTimes />
           </button>
-          <NavLink to="/" onClick={NavBarChange} >Home</NavLink>
-          <NavLink to="/store"  onClick={NavBarChange}>Store</NavLink>
-          <NavLink to="/about"  onClick={NavBarChange}>About</NavLink>
-          <NavLink to="/YourCart"  onClick={NavBarChange}>
+          <NavLink to="/" onClick={NavBarChange}>
+            Home
+          </NavLink>
+          <NavLink to="/store" onClick={NavBarChange}>
+            Store
+          </NavLink>
+          <NavLink to="/about" onClick={NavBarChange}>
+            About
+          </NavLink>
+          <NavLink to="/YourCart" onClick={NavBarChange}>
             <MdShoppingCart />
           </NavLink>
           {user === "" ? (
             <>
-              <NavLink to="/Subscribe"  onClick={NavBarChange}>
+              <NavLink to="/Subscribe" onClick={NavBarChange}>
                 <button className="SubButton">Subscribe</button>
               </NavLink>
-              <NavLink to="/SignIn"  onClick={NavBarChange}>
+              <NavLink to="/SignIn" onClick={NavBarChange}>
                 <button className="SubButton">Sign In</button>
               </NavLink>
             </>
-          ) : (<>
-            <h1 className="User">{user} </h1>
-            <button onClick={logOut} className="Log_out"><ImExit size={25}/></button>
+          ) : (
+            <>
+              <h1 className="User">{user} </h1>
+              <button onClick={() => setOpenModal(true)} className="Log_out">
+                <ImExit size={25} />
+              </button>
+              {openModal && (
+                <Modal closeModal={{ setOpenModal, user, logOut }} />
+              )}
             </>
           )}
         </nav>

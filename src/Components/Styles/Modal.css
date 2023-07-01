@@ -1,0 +1,28 @@
+.contain{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+.sure{
+    color: rgba(255,0,0,.8);
+    font-size: 1.25rem;
+}
+.Options {
+    display: flex;
+    gap: 10px;
+}
+.Options button {
+    border: none;
+    padding: 5px;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.Options button:nth-child(1){
+    background-color: red;
+}
+.Options button:nth-child(2){
+    background-color: hsla(204, 78%, 53%,.8);
+}

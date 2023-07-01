@@ -12,7 +12,7 @@ import kit from "../Images/1500W+DC+ALL+PARTS-removebg-preview.png";
 import finalProduct from "../Images/model-a-side-removebg-preview.png";
 import { motion } from "framer-motion";
 import {  useNavigate } from "react-router-dom";
-
+import {BsCart4} from 'react-icons/bs'
 export const Store = () => {
   const ToCart = useNavigate();
   const [searchItem, SetSearchItem] = useState("");
@@ -86,7 +86,7 @@ export const Store = () => {
           onChange={(e) => SetSearchItem(e.target.value)}
           placeholder="Search..."
         />
-        <button onClick={()=>ToCart('/YourCart')} className="GoToCart">Check Your Cart</button>
+        <button onClick={()=>ToCart('/YourCart')} className="GoToCart"><BsCart4 size={30}/></button>
         </div>
         <div className="products-items">
           {Products.filter((user)=>(user.name).toLowerCase().includes(searchItem.toLowerCase())).map((product) => (

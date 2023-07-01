@@ -39,7 +39,7 @@
     color: var(--USER-COLOR);
 }
 .ani{
-    animation: Exist .5s ease-in-out forwards;
+    animation: Exist .5s 0s ease-out forwards;
 }
 .user{
     text-transform: capitalize;

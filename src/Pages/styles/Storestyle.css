@@ -181,13 +181,13 @@ header {
     width: 100%;
     background-color:var(--DESIGN-COLOR);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     margin-top: 1rem;
 
 }
 .GoToCart{
-    background-color: white;
+    color: white;
     border: none;
     cursor: pointer;
     padding:0 1rem;
@@ -195,6 +195,7 @@ header {
     border-radius: 5px;
     font-size: larger;
     transition: all .3s;
+    background-color: transparent;
 }
 .GoToCart:hover{
     transform: scale(1.2) translateY(-8px);

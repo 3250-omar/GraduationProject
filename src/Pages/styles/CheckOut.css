@@ -20,7 +20,7 @@
     padding: 2rem;
     border-radius: 20px;
 }
-.CheckOutDetails h2{
+.CheckOutDetails h1{
     border-bottom: 2px solid black;
     padding-bottom: 10px;
 }
@@ -29,6 +29,8 @@
 }
 .CheckOutDetails li {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1.5rem;
     gap: .75rem;
 }
@@ -69,4 +71,10 @@ table {
 }
 td{
     text-align: center;
+}
+.CheckOutDetails input {
+    width: 100px;
+}
+.hidden{
+    display: none;
 }

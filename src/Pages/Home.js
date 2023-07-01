@@ -5,7 +5,7 @@ import { BsMouse } from "react-icons/bs";
 import Cover from "../Images/Sec2 photos/section 2 pic1.jpg";
 import BgVideo from "../Images/video.mp4";
 import Part3Bg from "../Images/Section2 Background.jpg";
-
+import { BiUpArrowCircle } from "react-icons/bi";
 import { motion } from "framer-motion";
 import { Sec3Bike } from "../Components/Sec3Bike";
 export const Home = () => {
@@ -39,6 +39,10 @@ export const Home = () => {
             </div>
           </div>
           <video src={BgVideo} autoPlay loop muted />
+          <div className="Uparrow">
+            {" "}
+           <a href="#"> <BiUpArrowCircle size={40} /></a>
+          </div>
         </section>
 
         <section id="sec2">
@@ -61,7 +65,9 @@ export const Home = () => {
                 safe which our bike is more secuire than any other products ,
                 <b>the important thing is it is suitable for Children also </b>
               </p>
-              <button onClick={() => ClickHandler()} className="insertbtn">Shop Bikes</button>
+              <button onClick={() => ClickHandler()} className="insertbtn">
+                Shop Bikes
+              </button>
             </div>
           </div>
           <div className="part3part4">
@@ -85,7 +91,9 @@ export const Home = () => {
                 That way you're always getting the best deal on your electric
                 bike.
               </p>
-              <button onClick={() => ClickHandler()} className="insertbtn">Shop Bikes</button>
+              <button onClick={() => ClickHandler()} className="insertbtn">
+                Shop Bikes
+              </button>
             </div>
           </div>
         </section>

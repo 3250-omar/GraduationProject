@@ -2,13 +2,14 @@ import Throttle from "../Images/products-Images/throttle 1.png";
 import Battery from "../Images/products-Images/the battery.png";
 import FlashLight from "../Images/products-Images/flashlight for bike.png";
 import HubMotor from "../Images/products-Images/hub motor.webp";
-import PhoneHolder from "../Images/products-Images/phone holder.jpg";
+import PhoneHolder from "../Images/products-Images/phone_holder-removebg-preview.png";
 import BedalLock from "../Images/products-Images/pedal lock.png";
-import PedalAssist from "../Images/products-Images/pedal assist.jpg";
+import PedalAssist from "../Images/products-Images/pedal_assist-removebg-preview.png";
 import Bell from "../Images/products-Images/bell.webp";
 import GpsTracker from "../Images/products-Images/Gps tracker.webp";
-import EspController from "../Images/products-Images/esp32_led_ldr_v3.png";
-
+import EspController from "../Images/products-Images/esp32_led_ldr_v3-removebg-preview.png";
+import ebike from "../Images/products-Images/NicePng_bike-front-png_2572307.png";
+import Kit from "../Images/products-Images/images-removebg-preview.png";
 export const Products = [
   {
     id: 1,
@@ -69,5 +70,17 @@ export const Products = [
     name: "Esp Controller",
     price: 40,
     productImage: EspController,
+  },
+  {
+    id: 11,
+    name: "e-Bike",
+    price: 1200,
+    productImage: ebike,
+  },
+  {
+    id: 12,
+    name: "Our Kit",
+    price: 300,
+    productImage: Kit,
   },
 ];
