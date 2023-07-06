@@ -10,6 +10,7 @@ import { AfterSignUp } from "../Components/AfterSignUp";
 import { NOTFOUND } from "../Pages/NOTFOUND";
 import { AnimatePresence } from 'framer-motion';
 import { Checkout } from '../Pages/Checkout';
+import { AfterOrder } from './AfterOrder';
 export const ROUTESAnimations = () => {
     const Location = useLocation();
   return (
@@ -25,6 +26,7 @@ export const ROUTESAnimations = () => {
           <Route path="/Subscribedsuccessfully" element={<AfterSignUp />} />
           <Route path="*" element={<NOTFOUND />} />
           <Route path='/CheckOut' element={<Checkout/>}/>
+          <Route path='/Thanks' element={<AfterOrder/>}/>
         </Routes>
         </AnimatePresence>
         </div>

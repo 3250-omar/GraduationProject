@@ -1,0 +1,52 @@
+.Thanks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 104.6px);
+}
+.Conten{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 450px;
+    background-color: white;
+    padding:1rem 10px ;
+    position: relative;
+    border-radius: 20px;
+}
+.Conten h1{
+    text-align: center;
+    letter-spacing: 5px;
+    color: rgb(0,180,0);
+}
+.Conten h4 , .Conten p{
+    text-align: center;
+    color: rgb(247, 120, 141);
+}
+.Conten button{
+    width: 300px;
+    margin: 0 auto;
+    padding:10px .5rem;
+    border: none;   
+    border-radius: 10px;
+    cursor: pointer;
+    background-color:  rgba(0,180,0,.6);
+    transition: all .3s;
+    color: white;
+    
+}
+.Conten button:hover {
+    background-color:  rgba(0,180,0,1);
+    transform: scale(1.2);
+
+}
+.Conten ol {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+

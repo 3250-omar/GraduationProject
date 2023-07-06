@@ -8,8 +8,10 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import "./styles/CheckOut.css";
 import { CheckOutComponent } from "../Components/CheckOutComponent";
+import { useNavigate } from "react-router-dom";
 
 export const Checkout = () => {
+  const Thanks = useNavigate();
   let sum = 0;
   const { user, email, Phone, setEmail, setPhone } = useContext(LogContext);
   const [userName, setUserName] = useState("");
@@ -31,6 +33,7 @@ export const Checkout = () => {
   });
   const OnSubmit = ([userName, email, Address, Phone]) => {
     console.log([userName, email, Address, Phone]);
+    Thanks("/Thanks");
   };
   return (
     <div className="Checkout">
@@ -44,12 +47,13 @@ export const Checkout = () => {
           <h1>One More Step To Get One Of Rider Products</h1>
           <ul>
             <li>
-              <label {...register("fullName")}>UserName : </label>{" "}
+              <label>FullName : </label>
               <input
-                value={userName}
                 onChange={(e) => {
                   setUserName(e.target.value);
                 }}
+                {...register("fullName")}
+                placeholder="FullName..."
               />
             </li>
             <li>
@@ -76,8 +80,8 @@ export const Checkout = () => {
                 type="text"
                 onChange={(e) => setAddress(e.target.value)}
                 {...register("Address")}
+                placeholder="Address..."
               />
-              <span className="ErrosInSignIn">{errors.Address?.message}</span>
             </li>
           </ul>
           <h2>Your Order</h2>
@@ -106,7 +110,9 @@ export const Checkout = () => {
               }
             })}
           </table>
-          <h3>Total Price : {sum} $</h3>
+          <h3>
+            <span>Total Price :</span> {sum} $
+          </h3>
 
           <button className="FinishingOrder">Order Now</button>
         </form>
